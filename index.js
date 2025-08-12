@@ -23,7 +23,7 @@ async function upsertUser(telegramUser) {
       username: telegramUser.username || null,
       firstName: telegramUser.first_name || null,
       lastName: telegramUser.last_name || null,
-      languageCode: telegramUser.language_code || null,
+      language: telegramUser.language_code || null,
     };
 
     const user = await prisma.user.upsert({
